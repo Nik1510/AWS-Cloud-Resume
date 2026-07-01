@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikhil Kumar — Cloud & DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── NAVBAR ─── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>NK<span class="logo-bracket">/&gt;</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#visitor-counter">Views</a></li>
+      <li><a href="#architecture">AWS Architecture</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ─── HOME ─── -->
+  <section id="home" class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">nikhil@aws-cloud ~ $</span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line"><span class="prompt">$</span> <span class="cmd" id="typeTarget"></span><span class="cursor">|</span></p>
+        </div>
+      </div>
+      <h1 class="hero-name">Nikhil Kumar</h1>
+      <div class="hero-badges">
+        <span class="badge badge-aws">☁ AWS Solutions Architect Associate</span>
+        <span class="badge badge-oci">◈ OCI Certified Architect Associate</span>
+      </div>
+      <p class="hero-tagline">Building scalable cloud solutions using <em>AWS</em>, <em>Terraform</em>, <em>CI/CD</em>, and <em>Serverless</em> technologies.</p>
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+        <a href="#" id="downloadResume" class="btn btn-outline" data-drive-link="https://drive.google.com/file/d/1X6Kk_s_rPSwyKG3lw_gfsflKeCHmNUgQ/view?usp=sharing">Download Resume</a>
+        <a href="https://github.com" target="_blank" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <p>Computer Science student specializing in <strong>Cloud Computing & Automation</strong>. I architect and deploy production-grade cloud infrastructure, automate everything that can be automated, and obsess over building systems that are scalable, resilient, and cost-efficient.</p>
+          <p>When I'm not building in the cloud, I'm grinding LeetCode, contributing to open source, or writing about what I've learned in the DevOps ecosystem.</p>
+          <div class="about-interests">
+            <span>AWS</span><span>DevOps</span><span>Infrastructure as Code</span>
+            <span>Serverless</span><span>CI/CD</span><span>Automation</span>
+          </div>
+        </div>
+        <div class="skills-grid fade-in">
+          <div class="skill-category">
+            <div class="skill-cat-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Cloud
+            </div>
+            <div class="skill-pills">
+              <span class="pill pill-orange">AWS</span>
+              <span class="pill pill-orange">OCI</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              DevOps
+            </div>
+            <div class="skill-pills">
+              <span class="pill">Git</span>
+              <span class="pill">GitHub Actions</span>
+              <span class="pill">CI/CD</span>
+              <span class="pill">Docker</span>
+              <span class="pill pill-cyan">Terraform</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Programming
+            </div>
+            <div class="skill-pills">
+              <span class="pill">Java</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
+              <span class="pill">Bash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ACHIEVEMENTS ─── -->
+  <section id="achievements" class="section section-alt">
+    <div class="container">
+      <div class="section-label">02 — Achievements</div>
+      <h2 class="section-title">Certifications & Milestones</h2>
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in">
+          <div class="ach-icon ach-aws">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#FF6B35" fill-opacity="0.15"/><path d="M20 8L32 14V26L20 32L8 26V14L20 8Z" stroke="#FF6B35" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="4" fill="#FF6B35"/></svg>
+          </div>
+          <div class="ach-content">
+            <h3>AWS Certified Solutions Architect</h3>
+            <p>Associate Level · Amazon Web Services</p>
+            <a href="#" class="ach-link">View Credential ↗</a>
+          </div>
+        </div>
+        <div class="achievement-card fade-in">
+          <div class="ach-icon ach-oci">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#00D4FF" fill-opacity="0.12"/><path d="M12 20C12 15.58 15.58 12 20 12C24.42 12 28 15.58 28 20C28 24.42 24.42 28 20 28C15.58 28 12 24.42 12 20Z" stroke="#00D4FF" stroke-width="1.5" fill="none"/><path d="M20 16V20L23 23" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ach-content">
+            <h3>OCI Architect Associate</h3>
+            <p>Oracle Cloud Infrastructure · Certified</p>
+            <a href="#" class="ach-link">View Credential ↗</a>
+          </div>
+        </div>
+        <div class="achievement-card fade-in counter-card">
+          <div class="ach-icon ach-leet">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#FFC300" fill-opacity="0.12"/><path d="M14 14L26 26M14 26L20 20" stroke="#FFC300" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ach-content">
+            <h3><span class="counter" data-target="500">0</span>+ Problems Solved</h3>
+            <p>LeetCode · Data Structures & Algorithms</p>
+            <div class="ach-bar"><div class="ach-bar-fill" style="width:82%"></div></div>
+          </div>
+        </div>
+        <div class="achievement-card fade-in counter-card">
+          <div class="ach-icon ach-project">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#7B61FF" fill-opacity="0.12"/><rect x="11" y="14" width="18" height="14" rx="2" stroke="#7B61FF" stroke-width="1.5"/><path d="M16 14V12a2 2 0 012-2h4a2 2 0 012 2v2" stroke="#7B61FF" stroke-width="1.5"/></svg>
+          </div>
+          <div class="ach-content">
+            <h3><span class="counter" data-target="10">0</span>+ Projects Built</h3>
+            <p>Full Stack & Cloud Native Applications</p>
+            <div class="ach-bar"><div class="ach-bar-fill" style="width:60%"></div></div>
+          </div>
+        </div>
+        <div class="achievement-card fade-in">
+          <div class="ach-icon ach-resume">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#FF6B35" fill-opacity="0.1"/><path d="M14 10h12l4 4v16a2 2 0 01-2 2H14a2 2 0 01-2-2V12a2 2 0 012-2z" stroke="#FF6B35" stroke-width="1.5"/><path d="M26 10v6h6" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="22" x2="24" y2="22" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="26" x2="21" y2="26" stroke="#FF6B35" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="ach-content">
+            <h3>Cloud Resume Challenge</h3>
+            <p>Completed · Serverless AWS Portfolio</p>
+            <a href="#portfolio" class="ach-link">See Project ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PORTFOLIO ─── -->
+  <section id="portfolio" class="section">
+    <div class="container">
+      <div class="section-label">03 — Portfolio</div>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="portfolio-grid">
+        <div class="project-card featured fade-in">
+          <div class="project-glow"></div>
+          <div class="project-top">
+            <div class="project-tags">
+              <span class="tag tag-orange">AWS</span>
+              <span class="tag">Serverless</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">CI/CD</span>
+            </div>
+            <a href="#" class="project-link-icon" aria-label="Open project">↗</a>
+          </div>
+          <h3>Cloud Resume Challenge</h3>
+          <p>Serverless portfolio built on AWS — static site on S3, distributed via CloudFront, with a Lambda-powered visitor counter persisted in DynamoDB. Infrastructure provisioned entirely with Terraform; deployed via GitHub Actions CI/CD pipeline.</p>
+          <div class="project-stack">
+            <span>S3</span><span>CloudFront</span><span>Lambda</span><span>DynamoDB</span><span>Terraform</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-top">
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <a href="https://social-x-plum.vercel.app/" target="_blank" rel="noopener" class="project-link-icon">↗</a>
+          </div>
+          <h3>SocialX</h3>
+          <p>Modern social media platform with real-time feeds, post reactions, and follow graphs. Built with a microservices-inspired architecture.</p>
+          <div class="project-links">
+            <a href="https://github.com/Nik1510/SocialX" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="https://social-x-plum.vercel.app/" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card fade-in">
+          <div class="project-top">
+            <div class="project-tags">
+              <span class="tag tag-cyan">AI</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Cloudinary</span>
+            </div>
+            <a href="https://cloudinary-saas-sage.vercel.app/home" target="_blank" rel="noopener" class="project-link-icon">↗</a>
+          </div>
+          <h3>Cloudinary AI SaaS</h3>
+          <p>AI-powered media transformation platform — auto-cropping, background removal, and generative fill, all through a polished SaaS interface.</p>
+          <div class="project-links">
+            <a href="https://github.com/Nik1510/Cloudinary-saas" target="_blank" rel="noopener" class="btn btn-sm btn-outline">GitHub</a>
+            <a href="https://cloudinary-saas-sage.vercel.app/home" target="_blank" rel="noopener" class="btn btn-sm btn-primary">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card project-placeholder fade-in">
+          <div class="placeholder-inner">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <p>Next project<br/>coming soon</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BLOG ─── -->
+  <section id="blog" class="section section-alt">
+    <div class="container">
+      <div class="section-label">04 — Blog</div>
+      <h2 class="section-title">Writing</h2>
+      <div class="blog-single">
+        <article class="blog-article fade-in">
+          <h3>Inside the AWS Architecture: How this Cloud Resume Project Works</h3>
+          <p>This project demonstrates a minimal, production-ready serverless static website deployed on AWS with a small dynamic component (a visitor counter). It prioritizes low operational overhead, secure defaults, and repeatable infrastructure through Terraform.</p>
+
+          <h4>Static Hosting: S3 + CloudFront</h4>
+          <p>All static assets (HTML, CSS, JS, images) are stored in an Amazon S3 bucket configured for website hosting. CloudFront sits in front of S3 as the CDN, providing TLS termination, global edge caching, and improved performance for visitors worldwide. CloudFront also allows cache-control headers and path-based behaviors, so we can serve static content fast while forwarding specific API calls to the dynamic backend.</p>
+
+          <h4>Visitor Counter: Lambda + API Gateway + DynamoDB</h4>
+          <p>The only dynamic piece is a lightweight Lambda function that atomically increments and returns the visitor count. The function is invoked via a public API (API Gateway). It uses DynamoDB as a durable key-value store with a single-item counter record. The Lambda code performs an atomic update (UpdateItem with ADD) to avoid race conditions under concurrent access.</p>
+
+          <h4>Infrastructure as Code</h4>
+          <p>Terraform defines S3, CloudFront, Lambda, DynamoDB, IAM roles, and API Gateway configurations. This ensures resources are reproducible, auditable, and easy to change. IAM policies follow the least-privilege principle: the Lambda role has permission only to read/write the specific DynamoDB table and write logs to CloudWatch.</p>
+
+          <h4>CI/CD — GitHub Actions</h4>
+          <p>A GitHub Actions workflow builds and deploys the site on push to the main branch. The job syncs compiled site files to S3 and then triggers CloudFront invalidation so edge caches update quickly. Terraform runs can be included in the workflow (plan/apply) behind appropriate safeguards (branch protections and PR approvals).</p>
+
+          <h4>Security & Performance Considerations</h4>
+          <ul>
+            <li>HTTPS everywhere via CloudFront — no plaintext HTTP exposed to users.</li>
+            <li>Cache static assets aggressively with sensible cache-control headers to reduce origin egress and improve latency.</li>
+            <li>Use DynamoDB provisioned capacity or on-demand depending on expected traffic; for small projects, on-demand reduces management overhead.</li>
+            <li>Enable CloudWatch logging and set basic alerts for Lambda errors or high 5xx rates from API Gateway.</li>
+          </ul>
+
+          <h4>How a Visit Works (Step-by-step)</h4>
+          <ol>
+            <li>User requests the homepage — CloudFront serves cached content from the nearest edge. If stale, CloudFront fetches from S3.</li>
+            <li>The page's JavaScript calls the counter API endpoint (POST to /count).</li>
+            <li>API Gateway receives the request and forwards it to Lambda.</li>
+            <li>Lambda updates the visitor count in DynamoDB using an atomic update and returns the new value.</li>
+            <li>The page displays the returned count — visible to the user immediately.</li>
+          </ol>
+
+          <h4>Observability & Cost</h4>
+          <p>CloudWatch collects logs and metrics from Lambda and API Gateway. For small personal projects, costs are minimal — S3 and CloudFront for storage and delivery, DynamoDB on-demand for a single-counter item, and Lambda requests billed at a small fraction of a dollar per month for low traffic.</p>
+
+          <h4>Extensibility</h4>
+          <p>The architecture is intentionally modular: you can add authentication, richer APIs, analytics, or serverless functions without changing the static hosting pattern. Terraform modules make it easy to add environments (staging/production) and reuse components.</p>
+
+          <p>Want me to convert this article into a standalone blog post page or wire a "Read more" link to load it in-place? I can add a modal or a dedicated blog route.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── VISITOR COUNTER ─── -->
+  <section id="visitor-counter" class="section section-counter">
+    <div class="container counter-container">
+      <div class="vc-label">Live Visitor Count</div>
+      <div class="vc-number" id="visitorCount">
+        <span class="vc-loading">
+          <span class="vc-dot"></span><span class="vc-dot"></span><span class="vc-dot"></span>
+        </span>
+      </div>
+      <p class="vc-sub">Powered by <strong>AWS Lambda</strong> + <strong>DynamoDB</strong> — updated on every visit.</p>
+      <div class="vc-status" id="vcStatus"></div>
+    </div>
+  </section>
+
+  <!-- ─── AWS ARCHITECTURE ─── -->
+  <section id="architecture" class="section">
+    <div class="container">
+      <div class="section-label">05 — AWS Architecture</div>
+      <h2 class="section-title">How It's Built</h2>
+      <div class="arch-layout">
+        <div class="arch-diagram fade-in">
+          <div class="arch-flow">
+            <div class="arch-node user-node">
+              <div class="arch-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.58-7 8-7s8 3 8 7"/></svg>
+              </div>
+              <span>User</span>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node cf-node">
+              <div class="arch-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+              </div>
+              <span>CloudFront CDN</span>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node s3-node">
+              <div class="arch-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15c0 3.87-4.03 7-9 7S3 18.87 3 15V9c0-3.87 4.03-7 9-7s9 3.13 9 7v6z"/><path d="M21 9c0 3.87-4.03 7-9 7S3 12.87 3 9"/></svg>
+              </div>
+              <span>S3 Static Website</span>
+            </div>
+            <div class="arch-fork">
+              <div class="arch-arrow">↓</div>
+              <div class="arch-arrow-label">JS API call</div>
+            </div>
+            <div class="arch-node lambda-node">
+              <div class="arch-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <span>AWS Lambda</span>
+            </div>
+            <div class="arch-arrow">↓</div>
+            <div class="arch-node dynamo-node">
+              <div class="arch-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3S3 13.66 3 12"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <span>DynamoDB</span>
+            </div>
+          </div>
+          <div class="arch-side-tools">
+            <div class="side-tool">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              Terraform provisions all infra
+            </div>
+            <div class="side-tool">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 012 2v7"/><path d="M11 18H8a2 2 0 01-2-2V9"/></svg>
+              GitHub Actions deploys on push
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-services fade-in">
+          <div class="service-card">
+            <div class="svc-header">
+              <span class="svc-badge svc-orange">S3</span>
+              <h4>Amazon S3</h4>
+            </div>
+            <p>Hosts all static website files — HTML, CSS, JavaScript — served globally through CloudFront with near-zero latency.</p>
+          </div>
+          <div class="service-card">
+            <div class="svc-header">
+              <span class="svc-badge svc-cyan">CDN</span>
+              <h4>CloudFront CDN</h4>
+            </div>
+            <p>Distributes content from edge locations worldwide. Handles HTTPS termination and dramatically reduces load times for every visitor.</p>
+          </div>
+          <div class="service-card">
+            <div class="svc-header">
+              <span class="svc-badge svc-orange">λ</span>
+              <h4>AWS Lambda</h4>
+            </div>
+            <p>Serverless function that atomically increments the visitor counter and returns the current count — zero servers to manage.</p>
+          </div>
+          <div class="service-card">
+            <div class="svc-header">
+              <span class="svc-badge svc-cyan">DB</span>
+              <h4>DynamoDB</h4>
+            </div>
+            <p>Key-value store that persists the visitor count with single-digit millisecond reads — serverless, pay-per-request pricing.</p>
+          </div>
+          <div class="service-card">
+            <div class="svc-header">
+              <span class="svc-badge svc-purple">TF</span>
+              <h4>Terraform</h4>
+            </div>
+            <p>Entire infrastructure defined as code. Version controlled, reproducible, and deployable in minutes to any AWS region.</p>
+          </div>
+          <div class="service-card">
+            <div class="svc-header">
+              <span class="svc-badge svc-green">CI</span>
+              <h4>GitHub Actions CI/CD</h4>
+            </div>
+            <p>Every push to main triggers automatic sync to S3 and CloudFront cache invalidation. Zero-touch deployments from commit to live.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label">07 — Contact</div>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-intro">I'm open to cloud internships, collaborations, and interesting projects. Drop a message.</p>
+      <div class="contact-links">
+        <a href="mailto:nikhilshaw575@gmail.com" class="contact-card fade-in">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-type">Email</span>
+            <!-- <span class="contact-value">nikhil@example.com</span> -->
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://github.com" target="_blank" class="contact-card fade-in">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-type">GitHub</span>
+            <!-- <span class="contact-value">github.com/nikhilkumar</span> -->
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="contact-card fade-in">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-type">LinkedIn</span>
+            <!-- <span class="contact-value">linkedin.com/in/nikhilkumar</span> -->
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://leetcode.com" target="_blank" class="contact-card fade-in">
+          <div class="contact-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+          </div>
+          <div class="contact-info">
+            <span class="contact-type">LeetCode</span>
+            <!-- <span class="contact-value">leetcode.com/nikhilkumar</span> -->
+          </div>
+          <span class="contact-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo"><span class="logo-bracket">&lt;</span>NK<span class="logo-bracket">/&gt;</span></div>
+      <p class="footer-tagline">Built with ❤️ using AWS and Serverless Architecture.</p>
+      <p class="footer-sub">© 2025 Nikhil Kumar · Cloud Resume Challenge</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
