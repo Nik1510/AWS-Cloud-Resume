@@ -314,3 +314,4 @@ if (downloadBtn) {
     downloadFileFromDrive(link, 'Nikhil_Kumar_Resume.pdf');
   });
 }
+console.log("script.js loaded successfully.");
